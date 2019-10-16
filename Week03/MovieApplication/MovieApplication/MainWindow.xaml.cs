@@ -37,12 +37,14 @@ namespace MovieApplication
 
         private void submitMovieButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie submittedMovie = new Movie();
+            Movie submittedMovie = new Movie(TitleTextbox.Text, GenreTextBox.Text, Double.Parse(ReviewScoreTextBox.Text));
 
-            submittedMovie.Title = TitleTextbox.Text;
-            submittedMovie.Genre = GenreTextBox.Text;
-           // submittedMovie.ReviewScore = Convert.ToDouble(ReviewScoreTextBox.Text);
-            submittedMovie.ReviewScore = Double.Parse(ReviewScoreTextBox.Text);
+            //submittedMovie.Title = TitleTextbBox.Text;
+            //submittedMovie.Genre = GenreTextBox.Text;
+            // submittedMovie.ReviewScore = Convert.ToDouble(ReviewScoreTextBox.Text);
+            //submittedMovie.ReviewScore = Double.Parse(ReviewScoreTextBox.Text);
+
+            submittedMovie.DisplayInformation();
         }
     }
 }
