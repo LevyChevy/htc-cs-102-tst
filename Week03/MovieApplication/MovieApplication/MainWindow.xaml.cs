@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,14 @@ namespace MovieApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        ObservableCollection <Movie> movieList = new ObservableCollection <Movie>();
+
+
         public MainWindow()
         {
             InitializeComponent();
+            movieListView.ItemsSource = movieList;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,7 +43,10 @@ namespace MovieApplication
 
         private void submitMovieButton_Click(object sender, RoutedEventArgs e)
         {
+           
             Movie submittedMovie = new Movie(TitleTextbox.Text, GenreTextBox.Text, Double.Parse(ReviewScoreTextBox.Text));
+
+            movieList.Add(submittedMovie);
 
             //submittedMovie.Title = TitleTextbBox.Text;
             //submittedMovie.Genre = GenreTextBox.Text;
@@ -45,6 +54,15 @@ namespace MovieApplication
             //submittedMovie.ReviewScore = Double.Parse(ReviewScoreTextBox.Text);
 
             submittedMovie.DisplayInformation();
+
+            TitleTextbox.Clear();
+            GenreTextBox.Clear();
+            ReviewScoreTextBox.Clear();
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
