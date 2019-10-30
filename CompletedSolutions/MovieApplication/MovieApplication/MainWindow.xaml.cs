@@ -37,9 +37,9 @@ namespace MovieApplication
 
         private void submitMovieButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie submittedMovie = new Movie(titleTextBox.Text, 
-                                            genreTextBox.Text, 
-                                            Double.Parse(reviewScoreTextBox.Text));
+            Movie submittedMovie = new Movie(titleTextBox.Text,
+                                genreTextBox.Text,
+                                Double.Parse(reviewScoreTextBox.Text));
 
             movieList.Add(submittedMovie);
             //submittedMovie.Title = titleTextBox.Text;
