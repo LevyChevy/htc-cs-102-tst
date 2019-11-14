@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:InheritanceIntro"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="300">
-    <StackPanel>
+    <StackPanel Margin="0,0,-149,0">
         <Button Click="SayName_Button_Click">Say Name</Button>
         <ListView x:Name="lvAnimals" Height="100">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Width="150" Header="Height" DisplayMemberBinding="{Binding Height}"/>
+                    <GridViewColumn Width="150" Header="Weight" DisplayMemberBinding="{Binding Weight}"/>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -30,13 +30,19 @@ namespace PolymorphismIntro
             Animals = new ObservableCollection<Animal>();
 
             // make siome aminals
-            Frog frog = new Frog(4,"Bart",true);
-            Dog dog = new Dog("Labradoodle", 35, "Pax");
-            Duck duck = new Duck(4, "Moo");
+            Frog frog = new Frog(4,"Bart",true, 1);
+            Dog dog = new Dog("Labradoodle", 35, "Pax", 100000);
+            Duck duck = new Duck(4, "Moo", 8);
+            Dog dog2 = new Dog("thing", 200, "Clifford", 1000);
+            Duck duck2 = new Duck(5, "Jeremiah", 60);
+            Frog frog2 = new Frog(3, "Daffy", true, 15);
 
             Animals.Add(frog);
             Animals.Add(dog);
             Animals.Add(duck);
+            Animals.Add(frog2);
+            Animals.Add(dog2);
+            Animals.Add(duck2);
 
             lvAnimals.ItemsSource = Animals;
         }
