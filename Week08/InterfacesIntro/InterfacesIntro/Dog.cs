@@ -18,11 +18,14 @@ namespace InterfacesIntro
 
         public Dog() { }
 
-        public Dog(string breed, int height, string name)
+        public Dog(string breed, int height, string name, double strideLength, int numLegs)
         {
             this.Breed = breed;
             this.Height = height;
             this.Name = name;
+            this.StrideLength = strideLength;
+            this.NumLegs = numLegs;
+
         }
     }
 }
