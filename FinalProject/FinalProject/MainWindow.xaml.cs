@@ -21,27 +21,50 @@ namespace FinalProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Login> UsersInfo;
+        string Username;
+        string Password;
+        string UNInput;
+        string PWInput;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-        //button clicky boi
-        private void buttonlogin_Click(object sender, EventArgs e)
-        {
-            
-        }
-        //username box 
-        private void UsernameBox_TextChanged(object sender, TextChangedEventArgs e)
+       
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        public void StoreData()
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
+        private void Regester_Click(object sender, RoutedEventArgs e)
+        {
+            Username = usernamebox.Text;
+            Password = passwordbox.Text;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            UNInput = usernamebox.Text;
+            PWInput = passwordbox.Text;
+            if(UNInput == Username)
+            {
+                if(PWInput == Password)
+                {
+                    Response.Text = "Password Correct";
+                }
+                else
+                {
+                    Response.Text = "Password Incorrect";
+                }
+            }else
+            {
+                Response.Text = "Password Incorrect";
+            }
+        }
     }
 }
