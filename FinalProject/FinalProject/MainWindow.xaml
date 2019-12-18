@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="550">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -25,8 +25,7 @@
         <Image x:Name="Image1_png" Margin="212,55,219,73" Source="Image1.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="86" Width="86" Cursor="Cross"/>
         <TextBox x:Name="passwordbox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="94" Margin="149,19,0,0" Grid.Row="1" TextChanged="textBox1_TextChanged" Background="#FFD1FFFB" BorderBrush="Black"/>
         <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="306,22,0,0" Grid.Row="1" Background="#FFAFFFF7" BorderBrush="#FF05E8FF" Click="button_Click"/>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="Response" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="295,200,0,0" Grid.RowSpan="2" IsReadOnly="True" TextChanged="Response_TextChanged" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <TextBox x:Name="OutputText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" Margin="306,200,0,0" Grid.RowSpan="2" TextChanged="OutputText_TextChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF3C82FD"/>
 
     </Grid>
 </Window>

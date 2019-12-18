@@ -21,10 +21,13 @@ namespace FinalProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        private const string R1 = "Saved";
+        private const string R2 = "Password Incorrect";
+        private const string R3 = "Login Sucessful";
         string Username;
         string Password;
         string UNInput;
-        string PWInput;
+        string PWInput; 
 
         public MainWindow()
         {
@@ -45,26 +48,26 @@ namespace FinalProject
         {
             Username = usernamebox.Text;
             Password = passwordbox.Text;
+            OutputText.Text = R1;
+        }
+
+        private void OutputText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             UNInput = usernamebox.Text;
             PWInput = passwordbox.Text;
-            if(UNInput == Username)
+            if((UNInput == Username) && (PWInput == Password))
             {
-                if(PWInput == Password)
-                {
-                    Response.Text = "Password Correct";
-                }
-                else
-                {
-                    Response.Text = "Password Incorrect";
-                }
-            }else
-            {
-                Response.Text = "Password Incorrect";
+                OutputText.Text = R3;
             }
-        }
+            else
+            {
+                OutputText.Text = R2;
+            }
+         }
     }
 }
