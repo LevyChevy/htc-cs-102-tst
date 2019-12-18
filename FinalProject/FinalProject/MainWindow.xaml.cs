@@ -49,6 +49,8 @@ namespace FinalProject
             Username = usernamebox.Text;
             Password = passwordbox.Text;
             OutputText.Text = R1;
+            passwordbox.Text = "";
+            usernamebox.Text = "";
         }
 
         private void OutputText_TextChanged(object sender, TextChangedEventArgs e)
@@ -62,11 +64,14 @@ namespace FinalProject
             PWInput = passwordbox.Text;
             if((UNInput == Username) && (PWInput == Password))
             {
+
                 OutputText.Text = R3;
             }
             else
             {
                 OutputText.Text = R2;
+                passwordbox.Text = "";
+                usernamebox.Text = "";
             }
          }
     }
